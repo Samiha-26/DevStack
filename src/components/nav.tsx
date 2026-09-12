@@ -3,7 +3,7 @@ import { FaBars } from "react-icons/fa6";
 
 const Nav = () => {
     return (
-        <nav className=" sticky top-0 z-50 container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 justify-center items-center px-4 pt-4">
+        <nav className=" fixed top-0 z-50 container mx-auto bg-white grid grid-cols-3 md:grid-cols-3 gap-12 justify-center items-center px-5 pt-5 md:px-8 lg:px-16">
 
              <FaBars className ="text-gray-600 block text-xl md:hidden" />
              <img src={Logo} alt="" />

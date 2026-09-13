@@ -2,6 +2,7 @@ import { use, useState } from "react";
 import type { Itech } from "../../types/technologytype";
 import AvailableTechs from "../AvailableTechs";
 import YourStack from "../YourStack";
+import { toast } from "react-toastify";
 
 interface techProps {
   technologiesPromise: Promise<Itech[]>;
@@ -13,13 +14,20 @@ const technologies = ({ technologiesPromise }: techProps) => {
 
   const handleAddToStack = (tech: Itech) => {
     if (myStack.some((item) => item.id === tech.id)) {
-      alert(`${tech.name} is already in your stack!`);
+      toast.warning(`${tech.name} is already in your stack!`);
       return;
     }
     setmyStack([...myStack, tech]);
+    toast.success(`${tech.name} added to your stack!`);
   };
   const handleRemoveFromStack = (id: string) => {
+    const removedItem = myStack.find((item) => item.id === id);
     setmyStack(myStack.filter((item) => item.id !== id));
+    if (removedItem) toast.error(`${removedItem.name} removed from stack`);
+  };
+  const handleClearAll = () => {
+    setmyStack([]);
+    toast.error("All technologies removed from your stack!");
   };
 
   return (
@@ -42,7 +50,7 @@ const technologies = ({ technologiesPromise }: techProps) => {
         <div className="w-full lg:w-80">
           <YourStack myStack={myStack} 
           onRemove={handleRemoveFromStack}
-          onClearAll={() => setmyStack([])}
+          onClearAll={handleClearAll}
           />
         </div>
       </div>

@@ -19,7 +19,7 @@ function App() {
     <>
     <Nav/>
     <Banner/>
-    <Suspense fallback={<h2>Loading...Wait for a few minutes</h2>}>
+    <Suspense fallback={<h2 className="text-4xl text-center color-gradient-text mt-15 mb-15 font-bold font-serif"><span className="text-black">Loading</span>...Please wait for a few seconds!!</h2>}>
     <Technologies technologiesPromise={technologiesPromise} />
     </Suspense>
     <ToastContainer />

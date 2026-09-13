@@ -2,19 +2,16 @@
 @plugin "daisyui";
 
 :root {
- --color-gradient: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6);
+  --color-gradient: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6);
 }
-
 .color-gradient-bg {
   background-image: var(--color-gradient);
 }
-
 .color-gradient-text {
   background-image: var(--color-gradient);
   background-clip: text;
   color: transparent;
 }
-
 .badge-popular {
   background-color: #fce7f3;
   color: #db2777;
@@ -72,7 +69,7 @@
 
 .badge-orchestration {
   background-color: aliceblue;
-  color: rgb(52, 159, 183)
+  color: rgb(52, 159, 183);
 }
 
 .badge-api-testing {

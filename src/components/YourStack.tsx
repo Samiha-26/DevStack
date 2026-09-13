@@ -55,7 +55,7 @@ const YourStack = ({ myStack, onRemove, onClearAll }: YourStackProps) => {
             <button
               type="button"
               onClick={onClearAll}
-              className="w-full py-2.5 mt-6 text-red-500 font-bold bg-white border border-red-200 rounded-xl hover:bg-red-50 transition-colors"
+              className="w-full py-1.5 mt-6 text-red-500 font-bold bg-white border border-red-200 rounded-xl hover:bg-red-50 hover:border-red-600 transition-colors hover:scale-105"
             >
               Remove All
             </button>

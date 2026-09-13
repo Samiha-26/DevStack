@@ -1,2 +1,16 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+:root {
+  --color-gradient: linear-gradient(90deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%);
+}
+
+.color-gradient-bg {
+  background-image: var(--color-gradient);
+}
+
+.color-gradient-text {
+  background-image: var(--color-gradient);
+  background-clip: text;
+  color: transparent;
+}

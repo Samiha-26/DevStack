@@ -43,7 +43,8 @@ const technologies = ({ technologiesPromise }: techProps) => {
         <div className="flex-1 w-full">
           <AvailableTechs 
             technologies={technologiesData} 
-            onAdd={handleAddToStack} 
+            onAdd={handleAddToStack}
+            myStack={myStack} 
           />
         </div>
 

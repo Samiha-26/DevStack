@@ -3,11 +3,17 @@ import type { Itech } from "../types/technologytype";
 interface techCardProps {
   tech: Itech;
   onAdd: (tech: Itech) => void;
+  isAdded: boolean;
 }
 
-const TechCard = ({ tech, onAdd }: techCardProps) => {
+const TechCard = ({ tech, onAdd, isAdded }: techCardProps) => {
   return (
-    <div className="flex flex-col justify-between bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div 
+      className={`flex flex-col justify-between bg-white border rounded-3xl p-10 transition-all ${
+        isAdded ? "border-pink-500 shadow-md" 
+          : "border-gray-100 shadow-sm hover:shadow-md"
+      }`}
+    >
       <div className="flex items-start justify-between">
         <img src={tech.icon} alt={`${tech.name} logo`} className="h-9 w-9 object-contain" />
         <span className= "rounded-full px-3 py-1 text-xs font-semibold">
@@ -27,9 +33,16 @@ const TechCard = ({ tech, onAdd }: techCardProps) => {
             {tech.rating}
           </span>
         </div>
-        <button onClick={() => onAdd(tech)}
-        className="btn btn-neutral w-full rounded-xl text-white hover:scale-105 transition-all">
-          Add to Stack
+       <button 
+          onClick={() => onAdd(tech)}
+          disabled={isAdded}
+          className={`w-full rounded-xl py-3 font-semibold transition-all ${
+            isAdded 
+              ? "bg-pink-50 text-pink-600 cursor-not-allowed" 
+              : "bg-black text-white hover:bg-gray-800 hover:scale-105"
+          }`}
+        >
+          {isAdded ? "✓ Added to Stack" : "Add to Stack"}
         </button>
       </div>
     </div>

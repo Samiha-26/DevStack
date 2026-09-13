@@ -18,6 +18,9 @@ const technologies = ({ technologiesPromise }: techProps) => {
     }
     setmyStack([...myStack, tech]);
   };
+  const handleRemoveFromStack = (id: string) => {
+    setmyStack(myStack.filter((item) => item.id !== id));
+  };
 
   return (
     <div className="container mx-auto mt-24 px-4 md:px-8 lg:px-16">
@@ -37,7 +40,7 @@ const technologies = ({ technologiesPromise }: techProps) => {
         </div>
 
         <div className="w-full lg:w-80">
-          <YourStack myStack={myStack} />
+          <YourStack myStack={myStack} onRemove={handleRemoveFromStack}/>
         </div>
       </div>
     </div>

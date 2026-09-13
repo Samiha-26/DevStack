@@ -2,12 +2,7 @@
 @plugin "daisyui";
 
 :root {
-  --color-gradient: linear-gradient(
-    90deg,
-    #f97316 0%,
-    #ec4899 50%,
-    #8b5cf6 100%
-  );
+ --color-gradient: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6);
 }
 
 .color-gradient-bg {

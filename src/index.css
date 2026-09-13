@@ -2,7 +2,12 @@
 @plugin "daisyui";
 
 :root {
-  --color-gradient: linear-gradient(90deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%);
+  --color-gradient: linear-gradient(
+    90deg,
+    #f97316 0%,
+    #ec4899 50%,
+    #8b5cf6 100%
+  );
 }
 
 .color-gradient-bg {
@@ -13,4 +18,69 @@
   background-image: var(--color-gradient);
   background-clip: text;
   color: transparent;
+}
+
+.badge-popular {
+  background-color: #fce7f3;
+  color: #db2777;
+}
+
+.badge-approachable {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.badge-fast {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.badge-batteries-included {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.badge-top-sql {
+  background-color: #ede9fe;
+  color: #7c3aed;
+}
+
+.badge-nosql {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.badge-essential {
+  background-color: #fce7f3;
+  color: #db2777;
+}
+
+.badge-versatile {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.badge-utility-first {
+  background-color: #cffafe;
+  color: #0891b2;
+}
+
+.badge-classic {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.badge-containers {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.badge-orchestration {
+  background-color: aliceblue;
+  color: rgb(52, 159, 183)
+}
+
+.badge-api-testing {
+  background-color: rgb(228, 234, 236);
+  color: #4f46e5;
 }

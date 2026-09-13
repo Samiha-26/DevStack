@@ -2,8 +2,8 @@ import Hero from "../assets/banner-stack.png";
 const Banner = () => {
   return (
 
-    <section className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 mt-24 container mx-auto px-4 md:px-8 lg:px-16">
-      <div className="text-center">
+    <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12 mt-24 px-4 md:px-8 lg:px-16">
+      <div className="text-center md:text-left">
         <h1 className="text-4xl md:text-6xl font-bold text-black">Build Your Ideal <br />
   <span className="color-gradient-text" >Development Stack</span></h1>
         <p className="text-gray-600 pt-4">

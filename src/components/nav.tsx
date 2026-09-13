@@ -8,7 +8,7 @@ const Nav = () => {
              <FaBars className ="text-gray-600 block text-xl md:hidden" />
              <img src={Logo} alt="" />
                 
-                <ul className="hidden md:flex items-center gap-4 text-gray-600">
+                <ul className="hidden md:flex items-center gap-4 text-gray-600 font-sans font-semibold">
                     <li><a href="" className="hover:text-pink-600 transition-colors">Home</a></li>
                     <li><a href="" className="hover:text-pink-600 transition-colors">Technologies</a></li>
                     <li><a href="" className="hover:text-pink-600 transition-colors">Projects</a></li>

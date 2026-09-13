@@ -40,7 +40,10 @@ const technologies = ({ technologiesPromise }: techProps) => {
         </div>
 
         <div className="w-full lg:w-80">
-          <YourStack myStack={myStack} onRemove={handleRemoveFromStack}/>
+          <YourStack myStack={myStack} 
+          onRemove={handleRemoveFromStack}
+          onClearAll={() => setmyStack([])}
+          />
         </div>
       </div>
     </div>
